@@ -300,7 +300,7 @@ public class SistemaEscolar {
         }
     }
 }
-class Persona {
+class Persona implements Serializable {
     private String nombre, apellido, dni, fechaNac;
 
     public Persona(String nombre, String apellido, String dni, String fechaNac) {
@@ -343,7 +343,7 @@ class Persona {
     }
 }
 
-class Estudiante extends Persona {
+class Estudiante extends Persona implements Serializable{
     private String idEstudiante;
 
     public Estudiante(String nombre, String apellido, String dni, String fechaNac, String idEstudiante) {
@@ -360,7 +360,7 @@ class Estudiante extends Persona {
     }
 }
 
-class Profesor extends Persona {
+class Profesor extends Persona implements Serializable{
     private String especialidad;
 
     public Profesor(String nombre, String apellido, String dni, String fechaNac, String especialidad) {
@@ -372,7 +372,7 @@ class Profesor extends Persona {
     }
 }
 
-class Materia {
+class Materia implements Serializable{
     private String nombre;
     private String profesorACargo;
     private List<String> estudiantesInscritos; // Lista de estudiantes inscritos en la materia
